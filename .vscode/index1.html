@@ -1,0 +1,773 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logitech G | PRO X SUPERLIGHT 2</title>
+<style>
+:root{--bg:oklch(42.272% 0.0173 168.614);--fg:oklch(0.98 0 0);--card:oklch(94.259% 0.10117 146.378 / 0.053);--card-fg:oklch(0.98 0 0);--primary:oklch(0.55 0.2 250);--primary-fg:oklch(97.913% 0.00011 271.152);--secondary:oklch(0.15 0 0);--muted-fg:oklch(83.591% 0.0001 271.152);--border:oklch(0.2 0 0)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}body{font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--fg);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button{cursor:pointer;border:none;background:none;font:inherit;color:inherit}
+img{max-width:100%;height:auto;display:block}
+.max-w{max-width:80rem;margin:0 auto;padding:0 1rem}@media(min-width:640px){.max-w{padding:0 1.5rem}}@media(min-width:1024px){.max-w{padding:0 2rem}}
+.nav-fixed{position:fixed;top:0;left:0;right:0;z-index:50;transition:all 0.3s;background:color-mix(in oklch,var(--bg) 80%,transparent);backdrop-filter:blur(12px)}
+.nav-inner{height:3.5rem;display:flex;align-items:center;justify-content:space-between}
+.nav-links{display:flex;align-items:center;gap:1.5rem}
+.nav-links button{font-size:1.0025rem;color:#d4d0ff;transition:color 0.2 s;position:relative;white-space: nowrap;font-weight:900;}
+.nav-links button:hover{color:var(--fg)}
+.nav-links button.active{color:var(--fg)}
+.nav-links button.active::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:2px;background:var(--primary);border-radius:1px}
+.nav-logo{font-size:0.875rem;font-weight:600;color:var(--fg)}
+.hamburger{display:none;color:var(--muted-fg)}@media(max-width:767px){.nav-links{display:none}.hamburger{display:flex}}
+.page{display:none;padding-top:3.5rem}.page.active{display:block}
+.hero-min{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem 1rem;text-align:center;position:relative;overflow:hidden}
+.hero-min h1{font-size:2.5rem;font-weight:700;letter-spacing:-0.025em;line-height:1.1}@media(min-width:640px){.hero-min h1{font-size:3.5rem}}
+.hero-min .sub{font-size:1.25rem;font-weight:500;margin-top:0.75rem;color:color-mix(in oklch,var(--fg) 90%,transparent)}
+.hero-min .desc{font-size:1rem;color:var(--muted-fg);margin-top:0.75rem;max-width:36rem}
+.hero-min .price{font-size:1rem;color:var(--muted-fg);margin-top:1.5rem}
+.hero-min img{max-width:500px;width:100%;margin-top:2rem}
+.btn-pri{display:inline-flex;align-items:center;border-radius:9999px;background:var(--primary);color:var(--primary-fg);font-size:0.875rem;font-weight:500;padding:0.625rem 1.5rem;transition:opacity 0.2s}
+.btn-pri:hover{opacity:0.9}
+.btn-out{display:inline-flex;align-items:center;border-radius:9999px;background:var(--card);color:var(--fg);font-size:0.875rem;font-weight:500;padding:0.625rem 1.5rem;border:1px solid var(--border);transition:background 0.2s}
+.btn-out:hover{background:color-mix(in oklch,var(--card) 80%,transparent)}
+.section{padding:5rem 0;position:relative}.section h2{font-size:2rem;font-weight:700;margin-bottom:1rem}
+.section h3{font-size:1.25rem;font-weight:600;margin-bottom:0.75rem}
+.grid-2{display:grid;gap:2rem}@media(min-width:768px){.grid-2{grid-template-columns:1fr 1fr}}
+.grid-3{display:grid;gap:1.5rem}@media(min-width:768px){.grid-3{grid-template-columns:repeat(3,1fr)}}
+.grid-4{display:grid;gap:1.5rem}@media(min-width:768px){.grid-4{grid-template-columns:repeat(2,1fr)}}@media(min-width:1024px){.grid-4{grid-template-columns:repeat(4,1fr)}}
+.card1{border-radius:1rem;background:var(--card);padding:1.5rem;overflow:hidden}
+.card{
+  min: width 10px;;
+  border-radius:1rem;
+  /* 半透明底色+毛玻璃 */
+  background: oklch(from var(--card) l c h / 0.001);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(3px);
+  padding:1.5rem;
+  overflow:hidden;
+  border:0px solid oklch(from var(--border) l c h / 0.65);
+}
+
+.card-img{border-radius:0.75rem;overflow:hidden;margin-bottom:1rem}
+.card-img img{width:100%;height:auto}
+.pg-3{background:color-mix(in oklch,var(--secondary) 30%,transparent)}
+.text-muted{color:var(--muted-fg)}.text-sm{font-size:0.975rem}.text-xs{font-size:0.75rem}.text-lg{font-size:1.125rem}
+.fw-5{font-weight:500}.fw-6{font-weight:600}.fw-7{font-weight:700}
+.mt-2{margin-top:0.5rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.mt-8{margin-top:2rem}.mt-12{margin-top:3rem}.mt-16{margin-top:4rem}
+.mb-4{margin-bottom:1rem}.mb-8{margin-bottom:2rem}.mb-12{margin-bottom:3rem}
+.gap-2{gap:0.5rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}
+.py-3{padding:0.75rem 0}.px-6{padding:0 1.5rem}
+.text-center{text-align:center}
+.flex{display:flex}.flex-col{flex-direction:column}.items-c{align-items:center}.items-s{align-items:flex-start}.jc-sb{justify-content:space-between}.jc-c{justify-content:center}
+.w-full{width:100%}.block{display:block}.hidden{display:none}
+.relative{position:relative}.absolute{position:absolute}.inset-0{top:0;right:0;bottom:0;left:0}
+.overflow-h{overflow:hidden}.object-c{object-fit:contain}.object-cv{object-fit:cover}
+.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}
+.border-b{border-bottom:1px solid var(--border)}
+.leading-7{line-height:1.75}
+.space-y-2>*+*{margin-top:0.5rem}.space-y-4>*+*{margin-top:1rem}
+.ml-auto{margin-left:auto}
+/* Statistics */
+.stat-num{font-size:2.5rem;font-weight:700;color:var(--primary);line-height:1}@media(min-width:640px){.stat-num{font-size:3rem}}
+/* Compare table compact */
+.tbl{width:100%;min-width:500px;border-collapse:collapse}
+.tbl th{text-align:left;padding:0.75rem 0.5rem;font-size:0.875rem}
+.tbl th.c{text-align:center}
+.tbl th.high{background:var(--card);border-radius:0.75rem 0.75rem 0 0}
+.tbl td{text-align:center;padding:0.75rem 0.5rem;font-size:0.875rem;border-top:1px solid color-mix(in oklch,var(--border) 50%,transparent)}
+.tbl td.l{text-align:left;color:var(--muted-fg)}
+.tbl td.high{background:var(--card)}
+.badge{display:inline-block;padding:0.125rem 0.5rem;font-size:0.6875rem;font-weight:500;background:color-mix(in oklch,var(--primary) 15%,transparent);color:var(--primary);border-radius:9999px;margin-top:0.25rem}
+/* Footer */
+.ft{background:var(--secondary);border-top:1px solid var(--border)}
+.ft-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;padding:3rem 0}@media(min-width:768px){.ft-grid{grid-template-columns:repeat(4,1fr)}}
+.ft-col h3{font-size:0.8125rem;font-weight:600;margin-bottom:1rem}
+.ft-col a{font-size:0.8125rem;color:var(--muted-fg);transition:color 0.2s}
+.ft-col a:hover{color:var(--fg)}
+.ft-bot{border-top:1px solid var(--border);padding:1.5rem 0;display:flex;flex-direction:column;gap:1rem;text-align:center;font-size:0.75rem;color:var(--muted-fg)}@media(min-width:768px){.ft-bot{flex-direction:row;justify-content:space-between}}
+/* Specs */
+.spec-grid{display:grid;gap:1.5rem}@media(min-width:768px){.spec-grid{grid-template-columns:repeat(2,1fr)}}@media(min-width:1024px){.spec-grid{grid-template-columns:repeat(3,1fr)}}
+.spec-card{border-radius:1rem;background:var(--card);padding:1.25rem}
+.spec-card h4{font-size:0.875rem;font-weight:600;padding-bottom:0.75rem;margin-bottom:1rem;border-bottom:1px solid var(--border)}
+.spec-row{display:flex;justify-content:space-between;padding:0.375rem 0;font-size:0.8125rem}
+.spec-row dt{color:var(--muted-fg)}.spec-row dd{color:var(--fg)}
+/* Team */
+/* Team cards */
+.team-card{
+  border-radius:1rem;
+  background:var(--card);
+  padding:2rem 1.5rem;
+  border:1px solid color-mix(in oklch,var(--border) 40%,transparent);
+  transition:all 0.35s cubic-bezier(.4,0,.2,1);
+  position:relative;
+  overflow:hidden
+}
+.team-card::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  border-radius:1rem;
+  background:linear-gradient(135deg,color-mix(in oklch,var(--primary) 6%,transparent),transparent 60%);
+  opacity:0;
+  transition:opacity 0.35s ease
+}
+.team-card:hover{
+  transform:translateY(-4px);
+  border-color:color-mix(in oklch,var(--primary) 30%,transparent);
+  box-shadow:0 8px 32px rgba(0,0,0,0.25)
+}
+.team-card:hover::before{opacity:1}
+.team-card>*{position:relative;z-index:1}
+.team-img{width:5rem;height:5rem;border-radius:9999px;background:var(--primary);margin-bottom:0.75rem;display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-weight:700;color:var(--primary-fg);transition:all 0.35s cubic-bezier(.4,0,.2,1)}
+.team-card:hover .team-img{
+  transform:scale(1.1);
+  box-shadow:0 4px 20px color-mix(in oklch,var(--primary) 35%,transparent)
+}
+/* After-sale */
+/* After-sale service grid */
+.svc-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:1.25rem;
+  margin-top:3rem
+}
+@media(min-width:768px){
+  .svc-grid{grid-template-columns:1fr 1fr}
+}
+.svc-item{
+  padding:1.5rem;
+  border-radius:1rem;
+  background:var(--card);
+  display:flex;
+  gap:1rem;
+  align-items:flex-start;
+  border:1px solid color-mix(in oklch,var(--border) 40%,transparent);
+  transition:all 0.35s cubic-bezier(.4,0,.2,1);
+  position:relative;
+  overflow:hidden
+}
+.svc-item::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  border-radius:1rem;
+  background:linear-gradient(135deg,color-mix(in oklch,var(--primary) 6%,transparent),transparent 60%);
+  opacity:0;
+  transition:opacity 0.35s ease
+}
+.svc-item:hover{
+  transform:translateY(-4px);
+  border-color:color-mix(in oklch,var(--primary) 30%,transparent);
+  box-shadow:0 8px 32px rgba(0,0,0,0.25)
+}
+.svc-item:hover::before{opacity:1}
+.svc-item>*{position:relative;z-index:1}
+.svc-icon{
+  width:3rem;height:3rem;
+  border-radius:0.875rem;
+  background:linear-gradient(135deg,color-mix(in oklch,var(--primary) 20%,transparent),color-mix(in oklch,var(--primary) 5%,transparent));
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+  color:var(--primary);
+  font-size:1.35rem;
+  border:1px solid color-mix(in oklch,var(--primary) 15%,transparent);
+  transition:all 0.35s cubic-bezier(.4,0,.2,1)
+}
+.svc-item:hover .svc-icon{
+  background:linear-gradient(135deg,var(--primary),color-mix(in oklch,var(--primary) 70%,#fff));
+  color:#fff;
+  transform:scale(1.1) rotate(-3deg);
+  box-shadow:0 4px 16px color-mix(in oklch,var(--primary) 30%,transparent)
+}
+/* Company Profile page — full-bleed background image with top/bottom edge fade */
+#page-profile{position:relative;min-height:100vh}
+#page-profile::before{content:'';position:absolute;inset:0;
+              background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/tt.webp');background-size:cover;
+              background-position:center;background-repeat:no-repeat;
+              -webkit-mask-image:linear-gradient(to bottom,transparent 0%,rgba(0,0,0,.15) 7%,#000 22%,#000 78%,rgba(0,0,0,.15) 93%,transparent 100%);
+              mask-image:linear-gradient(to bottom,transparent 0%,rgba(0,0,0,.15) 7%,#000 22%,#000 78%,rgba(0,0,0,.15) 93%,transparent 100%);
+              z-index:0;pointer-events:none;}
+#page-profile>*{position:relative;z-index:1}
+#page-profile .section:first-child{padding-top:6rem}
+/* scroll animation */
+.scroll-anim{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease-out,transform 0.6s ease-out}
+.scroll-anim.done{opacity:1;transform:translateY(0)}
+.grad-text{
+  background:linear-gradient(600deg,#00ff40,#3740edd1);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;}
+.grad1-text{
+  background:linear-gradient(-800deg,#afddf1,#ffffff);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+</style>
+</head>
+<body>
+
+<!-- ===== Navigation ===== -->
+<nav class="nav-fixed">
+  <div class="max-w">
+    <div class="nav-inner" style="display:flex;align-items:center;justify-content:space-between;">
+      <!-- 左侧LOGO -->
+      <span class="nav-logo">Logitech G</span>
+      <!-- 中间导航链接 -->
+      <div class="nav-links" id="navLinks" style="display:flex;gap:3.5rem;">
+        <button class="active" data-page="home" onclick="goPage('home')">Homepage</button>
+        <button data-page="products" onclick="goPage('products')">Products</button>
+        <button data-page="profile" onclick="goPage('profile')">Company Profile</button>
+        <button data-page="service" onclick="goPage('service')">After-sale Service</button>
+        <button data-page="team" onclick="goPage('team')">Our Team</button>
+      </div>
+      <!-- 右侧汉堡菜单 -->
+      <button class="hamburger" id="hamBtn" onclick="toggleMobile()" style="border:none;background:transparent;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== PAGE: Home ===== -->
+<div class="page active" id="page-home">
+  <section class="hero-min">
+    <p class="text-xs" style="letter-spacing:0.1em;text-transform:uppercase;color:var(--primary);font-weight:500;margin-bottom:0.75rem;font-size: 1rem;">Pro Series</p>
+    <h1 class="grad-text" style="font-size: 5rem;">PRO X SUPERLIGHT 2c</h1>
+    <p class="sub" style="font-size: 2rem;">DESIGNED WITH PROS. ENGINEERED TO WIN.</p>
+    <p class="desc"style="font-size: 1.25rem;">Meet the newest challenger in our “champion-winning” line up. Crafted with the world’s top esports athletes.</p>
+
+    <!-- ========== 新布局：左上下文字 + 右图片 ========== -->
+<div  style="
+      max-width: 1200px;
+      margin: 5rem auto 3rem;
+      display: flex;
+      align-items: center;
+      gap:60px;
+    ">
+      <!-- 左侧容器：纵向上下排列 -->
+      <div style="flex:1;display:flex;flex-direction:column;gap:40px;">
+        <!-- 左上 Description -->
+        <div>
+          <h3 style="color:#fff; font-size:2rem; margin-bottom:10px;text-align:left;">Description</h3>
+          <p style="color:#ccdecc; font-size:1.25rem; font-weight:500; line-height:1.5; text-align:left; letter-spacing:-0.01em">
+            PRO X SUPERLIGHT 2c is a 1.79 oz(51g) compact mouse featuring advanced HERO 2 sensor, robust LIGHTSPEED wireless, and LIGHTFORCE switches while delivering up to 95 hours of battery life.
+          </p>
+        </div>
+        <!-- 左下 Dimensions -->
+        <div>
+          <h3 style="color:#fff; font-size:2rem; margin-bottom:10px;text-align:left;">Dimensions</h3>
+          <p style="color:#ccdecc; font-size:1.25rem; font-weight:500; line-height:1.5; text-align:left; letter-spacing:-0.01em">
+            Height: 1.51 in (38.5mm)<br>
+            Width: 2.41 in (61.4mm)<br>
+            Length: 4.66 in (118.4mm)<br>
+            Weight: 1.8 oz (51g)
+          </p>
+        </div>
+        <!-- 按钮在左侧最下方 -->
+        <div><a href="#" class="btn-pri" onclick="goPage('products')">Explore Products</a></div>
+      </div>
+
+      <!-- 右侧整图 -->
+      <div style="flex:1;">
+        <img src="images/mouse1.jpg" alt="PRO X SUPERLIGHT 2c" style="width:100%;height:auto;display:block;">
+      </div>
+    </div>
+    <!-- ============================================== -->
+
+  </section>
+</div>
+<!-- ===== PAGE: Products ===== -->
+<div class="page" id="page-products">
+
+  <!-- Product Hero -->
+  <section class="hero-min" style="min-height:auto;padding:4rem 1rem 2rem">
+    <p class="text-xs" style="letter-spacing:0.1em;text-transform:uppercase;color:var(--primary);font-weight:500;margin-bottom:0.75rem;font-size: 1rem;">Product Series</p>
+    <h1 class="grad-text" style="font-size:5rem">PRO X SUPERLIGHT 2c</h1>
+    <p class="sub" style="font-size:2rem">LIGHTSPEED Wireless Gaming Mouse</p>
+    <img src="images/intro.jpg" alt="PRO X SUPERLIGHT 2" style="max-width:800px;margin-top:2rem;">
+  </section>
+
+  <!-- Highlights -->
+  <section class="section pg-3">
+    <div class="max-w">
+      <h2 class="grad1-text text-center" style="font-size:4rem; margin-top:1rem;">Key Features</h2>
+      <div class="grid-4" style="margin-top:2rem">
+        <div class="card text-center"><div class="stat-num">51g</div><p class="text-sm text-muted"style="margin-top:0.7rem">Ultra-Light Weight</p><p class="text-xs text-muted" style="margin-top:0.25rem;white-space: nowrap; margin: 0;">0.7mm Ultra-Thin Base</p></div>
+        <div class="card text-center"><div class="stat-num">44K</div><p class="text-sm text-muted"style="margin-top:0.7rem">DPI</p><p class="text-xs text-muted" style="margin-top:0.25rem;white-space: nowrap; margin: 0;">HERO 2 Sensor, Zero Smoothing</p></div>
+        <div class="card text-center"><div class="stat-num">8K Hz</div><p class="text-sm text-muted"style="margin-top:0.7rem">Report Rate</p><p class="text-xs text-muted" style="margin-top:0.25rem;white-space: nowrap; margin: 0;">0.125ms Response</p></div>
+        <div class="card text-center"><div class="stat-num">95h</div><p class="text-sm text-muted"style="margin-top:0.7rem">Battery Life</p><p class="text-xs text-muted" style="margin-top:0.25rem;white-space: nowrap; margin: 0;">15 Min Fast Charge = 13h Usage</p></div>
+      </div>
+    </div>
+  </section>
+
+
+  <h2 class="grad1-text text-center" style="font-size:4rem; margin-top:1rem;">Additional Features</h2>
+<!-- Battery1 -->
+<section class="section pg-3">
+  <div class="max-w">
+    <div class="grid-2 items-c">
+      <div><img src="images/t1.webp" style="max-width: 600px;border-radius:1rem"></div>
+      <div>
+        <div style="max-width: 600px;">
+          <h2 style="white-space: nowrap; margin: 0;">PRECISION PERFECTED</h2>
+        </div>
+        <p class="text-sm text-muted leading-7" style="min-width: 540px;margin-top:0.5rem">Experience pro-precision with an advanced gaming sensor. Our exclusive HERO 2 sensor optimizes performance and efficiency with sub micron tracking at over 888 IPS, 8 G and up to 44,000 DPI.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Batter2y -->
+<section class="section pg-3">
+  <div class="max-w">
+    <div class="grid-2 items-c">
+      <div><img src="images/t2.webp" style="max-width: 600px;border-radius:1rem"></div>
+      <div>
+        <div style="max-width: 600px;">
+          <h2 style="white-space: nowrap; margin: 0;">Play at LIGHTSPEED</h2>
+        </div>
+        <p class="text-sm text-muted leading-7" style="min-width: 540px;margin-top:0.5rem">The trusted performance and reliability of LIGHTSPEED wireless at up to 8 kHz polling is at your fingertips. We design our wireless connection for tournament play and test for total reliability even in extreme RF environments beyond the world's biggest LANs. We make consistency critical – you put all your attention on your game.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Battery3 -->
+  <section class="section pg-3">
+    <div class="max-w">
+      <div class="grid-2 items-c">
+        <div><img src="images/t3.webp" style="max-width: 600px;border-radius:1rem"></div>
+        <div><h2 style="white-space: nowrap; margin: 0;">
+PRO PERFORMANCE IN A CLICK</h2><p class="text-sm text-muted leading-7" 
+style="min-width: 540px;margin-top:0.5rem">LIGHTFORCE switches offer the best of both worlds by combining the speed and reliability of optical switches with the satisfying feel of a traditional microswitch.
+</p><p style="margin-top:1rem"></p></div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- Battery4 -->
+<section class="section pg-3">
+  <div class="max-w">
+    <div class="grid-2 items-c">
+      <div><img src="images/t4.webp" style="max-width: 600px;border-radius:1rem"></div>
+      <div><h2 style="white-space: nowrap; margin: 0;">PRO GRADE TECH</h2><p class="text-sm text-muted leading-7" style="min-width: 540px;margin-top:0.5rem">With the power efficiency of HERO 2, LIGHTSPEED, and LIGHTFORCE, get up to 95 hours of battery life on a single charge. Quickly recharge using USB-C, or POWERPLAY 2 for complete wireless freedom (POWERPLAY 2 sold separately).</p></div>
+    </div>
+  </div>
+</section>
+
+
+
+
+</div>
+
+<!-- ===== PAGE: Company Profile ===== -->
+<div class="page" id="page-profile">
+  <section class="section" style="padding-top:6rem">
+    <div class="max-w">
+
+      <div class="text-center" style="max-width:48rem;margin:0 auto">
+        <h1 class="grad-text" style="font-size:6rem;font-weight:900 !important">About Logitech</h1>
+      </div>
+
+      <div  style="margin-top:5rem;max-width:70rem">
+        <h2 style="font: size 4rem;font-weight: 900;left:-12px;">About Us</h2>
+        <p class="text-sm text-muted leading-7" style="font-size: 1.25rem;margin-top:0.5rem;color:rgb(255, 255, 255);font-weight:900;">At Logitech, our purpose is to extend human potential in work and play.
+We do this by designing software-enabled hardware solutions that drive superior performance when gaming and superior productivity while at work, all with maximum comfort, speed and accuracy. We enable creativity when pursuing passions and connectivity so everyone is seen, heard and can contribute in their own unique way.</p>
+      </div>
+
+        <div class="grid-3" style="margin-top:4rem">
+          <div class=" text-center">
+            <div class="grad1-text" style="font-size:2.5rem;font-weight:700;">1981</div>
+            <p class="text-sm fw-5" style="font-size:1.5rem;margin-top:0.5rem">Year Founded</p>
+            <p class="text-xs " style="margin-top:0.25rem">Founded in Apples, Switzerland</p>
+          </div>
+          <div class=" text-center">
+            <div class="grad1-text" style="font-size:2.5rem;font-weight:700;">100+</div>
+            <p class="text-sm fw-5" style="font-size:1.5rem;margin-top:0.5rem">Countries & Regions</p>
+            <p class="text-xs " style="margin-top:0.25rem">Global Business Coverage</p>
+          </div>
+          <div class=" text-center">
+            <div class="grad1-text" style="font-size:2.5rem;font-weight:700;">7,000+</div>
+            <p class="text-sm fw-5" style="font-size:1.5rem;margin-top:0.5rem">Global Employees</p>
+            <p class="text-xs " style="margin-top:0.25rem">40+ Years of Industry Experience</p>
+          </div>
+        </div>
+
+
+<div style="margin-top:4rem">
+  <h2 class="text-center"></h2>
+  <div style="
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+  ">
+    <!-- 第1张图 + 文字 -->
+    <div>
+      <img src="images/brand1.webp" alt="Equality & Environment" style="width:100%; height:auto; display:block; margin-bottom:0.8rem;">
+      <p style="color:#fff; font-size:1.1rem; font-weight:500;">Equality & Environment</p>
+    </div>
+
+    <!-- 第2张图 + 文字 -->
+    <div>
+      <img src="images/brand2.webp" alt="Open & Ourselves" style="width:100%; height:auto; display:block; margin-bottom:0.8rem;">
+      <p style="color:#fff; font-size:1.1rem; font-weight:500;">Open & Ourselves</p>
+    </div>
+
+    <!-- 第3张图 + 文字 -->
+    <div>
+      <img src="images/brand3.webp" alt="可持续发展" style="width:100%; height:auto; display:block; margin-bottom:0.8rem;">
+      <p style="color:#fff; font-size:1.1rem; font-weight:500;">Hungry & Humble</p>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </section>
+</div>
+
+<!-- ===== PAGE: After-sale Service ===== -->
+<div class="page" id="page-service">
+  <section class="section" style="padding-top:6rem">
+    <div class="max-w">
+
+      <div class="text-center" style="max-width:48rem;margin:0 auto">
+        <h1 class="grad-text" style="font-size:3.5rem;font-weight:900">After-sale Service</h1>
+        <p class="text-muted" style="margin-top:0.5rem">We provide you with comprehensive after-sales support</p>
+      </div>
+
+      <div class="svc-grid">
+        <div class="svc-item">
+          <div class="svc-icon">🛡</div>
+          <div>
+            <h3 style="font-size:1.05rem;font-weight:600">2-Year Warranty</h3>
+            <p class="text-sm text-muted leading-7" style="margin-top:0.35rem">All Logitech G products come with a 2-year limited hardware warranty. Free repair or replacement for quality issues.</p>
+          </div>
+        </div>
+        <div class="svc-item">
+          <div class="svc-icon">📦</div>
+          <div>
+            <h3 style="font-size:1.05rem;font-weight:600">30-Day Return</h3>
+            <p class="text-sm text-muted leading-7" style="margin-top:0.35rem">Within 30 days of purchase, you can return for a refund at any time, no questions asked.</p>
+          </div>
+        </div>
+        <div class="svc-item">
+          <div class="svc-icon">🚚</div>
+          <div>
+            <h3 style="font-size:1.05rem;font-weight:600">Free Shipping</h3>
+            <p class="text-sm text-muted leading-7" style="margin-top:0.35rem">Free shipping on official store orders over $29, delivered in 3–5 business days.</p>
+          </div>
+        </div>
+        <div class="svc-item">
+          <div class="svc-icon">💬</div>
+          <div>
+            <h3 style="font-size:1.05rem;font-weight:600">Online Support</h3>
+            <p class="text-sm text-muted leading-7" style="margin-top:0.35rem">24/7 online customer support. Contact us via website, email, or social media.</p>
+          </div>
+        </div>
+        <div class="svc-item">
+          <div class="svc-icon">🔧</div>
+          <div>
+            <h3 style="font-size:1.05rem;font-weight:600">Repair Service</h3>
+            <p class="text-sm text-muted leading-7" style="margin-top:0.35rem">Nationwide authorized repair centers. Submit a ticket online for fast-response repair service.</p>
+          </div>
+        </div>
+        <div class="svc-item">
+          <div class="svc-icon">📥</div>
+          <div>
+            <h3 style="font-size:1.05rem;font-weight:600">Driver Download</h3>
+            <p class="text-sm text-muted leading-7" style="margin-top:0.35rem">Free Logitech G HUB download for custom buttons, lighting, and performance settings.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:3rem;text-align:center;padding:2.5rem 2rem;border:1px solid color-mix(in oklch,var(--primary) 15%,transparent);position:relative">
+        <div style="position:absolute;top:0;left:2rem;right:2rem;height:3px;background:linear-gradient(90deg,transparent,var(--primary),transparent);border-radius:0 0 3px 3px"></div>
+        <h3 style="font-size:1.15rem">Contact Us</h3>
+        <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1.25rem 1.5rem;margin-top:0.75rem">
+          <span style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.9rem;color:var(--muted-fg)">📧 support@logitech.com</span>
+          <span style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.9rem;color:var(--muted-fg)">📞 400-XXX-XXXX</span>
+          <span style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.9rem;color:var(--muted-fg)">🌐 support.logitech.com</span>
+        </div>
+        <p class="text-xs text-muted" style="margin-top:0.75rem">Business hours: Monday to Friday 9:00 - 18:00 (excluding holidays)</p>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<!-- ===== PAGE: Our Team ===== -->
+<div class="page" id="page-team">
+  <section class="section" style="padding-top:6rem">
+    <div class="max-w">
+
+      <div class="text-center" style="max-width:48rem;margin:0 auto">
+        <h1 class="grad-text" style="font-size:3rem;font-weight:700">Company Leadership</h1>
+      </div>
+
+<div style="margin-top:3rem; display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center;">
+  <!-- 第 1 个 -->
+  <div class="team-card text-center" style="flex: 0 1 calc(33.333% - 1rem);min-width:200px">
+    <div class="team-img" style="margin:0 auto 0.75rem">SB</div>
+    <h3 style="font-size:1rem">Hanneke Faber</h3>
+    <p class="text-sm text-muted" style="margin-top:0.25rem">CEO, Logitech</p>
+  </div>
+
+  <!-- 第 2 个 -->
+  <div class="team-card text-center" style="flex: 0 1 calc(33.333% - 1rem);min-width:200px">
+    <div class="team-img" style="margin:0 auto 0.75rem;background:var(--fg);color:var(--bg)">UJ</div>
+    <h3 style="font-size:1rem">Ujesh Desai</h3>
+    <p class="text-sm text-muted" style="margin-top:0.25rem">VP, Logitech G</p>
+  </div>
+
+  <!-- 第 3 个 -->
+  <div class="team-card text-center" style="flex: 0 1 calc(33.333% - 1rem);min-width:200px">
+    <div class="team-img" style="margin:0 auto 0.75rem;background:#e91e8c">SL</div>
+    <h3 style="font-size:1rem">Sam L.</h3>
+    <p class="text-sm text-muted" style="margin-top:0.25rem">首席产品设计师</p>
+  </div>
+
+  <!-- 第 4 个 -->
+  <div class="team-card text-center" style="flex: 0 1 calc(33.333% - 1rem);min-width:200px">
+    <div class="team-img" style="margin:0 auto 0.75rem;background:color-mix(in oklch,var(--primary) 60%,var(--fg))">TH</div>
+    <h3 style="font-size:1rem">Tony H.</h3>
+    <p class="text-sm text-muted" style="margin-top:0.25rem">电竞合作总监</p>
+  </div>
+
+  <!-- 第 5 个 -->
+  <div class="team-card text-center" style="flex: 0 1 calc(33.333% - 1rem);min-width:200px">
+    <div class="team-img" style="margin:0 auto 0.75rem;background:color-mix(in oklch,var(--primary) 60%,var(--fg))">TH</div>
+    <h3 style="font-size:1rem">Tony H.</h3>
+    <p class="text-sm text-muted" style="margin-top:0.25rem">电竞合作总监</p>
+  </div>
+</div>
+
+      <div class="card" style="margin-top:3rem;padding:2rem;text-align:center">
+        <h2 class="grad1-text" style="margin-bottom:0.5rem">How you join</h2>
+        <p class="text-sm text-muted">At Logitech, we live our values and expect you to show the same to become one of us. Be who you are, come prepared, and we’ll try to make it enjoyable in the process.</p>
+        <div style="margin-top: 3rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; text-align: left;">
+  <!-- 第一列 -->
+  <div>
+    <h3 style="font-size: 1.1rem; color: #fff; margin: 0 0 0.5rem 0;">Introduce Yourself</h3>
+    <p style="font-size: 0.9rem; color: #aaa; line-height: 1.6; margin: 0;">Apply for any open listing. 
+</p>
+  </div>
+
+  <!-- 第二列 -->
+  <div>
+    <h3 style="font-size: 1.1rem; color: #fff; margin: 0 0 0.5rem 0;">Getting to know us</h3>
+    <p style="font-size: 0.9rem; color: #aaa; line-height: 1.6; margin: 0;">Meet future colleagues; hiring manager, team members, other leaders, etc. 
+</p>
+  </div>
+
+  <!-- 第三列 -->
+  <div>
+    <h3 style="font-size: 1.1rem; color: #fff; margin: 0 0 0.5rem 0;">Joining Logitech</h3>
+    <p style="font-size: 0.9rem; color: #aaa; line-height: 1.6; margin: 0;">We discuss and extend an offer. You accept. Can’t wait to have you here!
+</p>
+    </div>
+
+
+  </section>
+      <div style="margin-top:2rem; text-align:center">
+          <a href="https://www.logitech.com/en-us/careers" class="btn-pri" target="_blank">Join Us</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+<!-- ===== Footer 黑底 + 白绿渐变 + 全部纯文字 无点击 ===== -->
+<style>
+.ft {
+  background: #000;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.6;
+  padding: 24px 0;
+  margin-top: 40px;
+}
+.max-w {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 22px;
+}
+.ft-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #333;
+}
+.ft-col h3 {
+  font-size: 16px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #ffffff, #4ade80);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: 0 0 10px 0;
+}
+.ft-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.ft-col li {
+  margin-bottom: 8px;
+  color: #aaa;
+}
+.ft-bot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding-top: 18px;
+  font-size: 14px;
+  color: #666;
+}
+</style>
+
+<footer class="ft">
+  <div class="max-w">
+    <div class="ft-grid">
+
+      <!-- 第一列 -->
+      <div class="ft-col">
+        <h3>Shop and Learn</h3>
+        <ul>
+          <li>Store</li>
+          <li>Logitech Mice</li>
+          <li>Keyboards</li>
+          <li>Headsets</li>
+          <li>Accessories</li>
+        </ul>
+      </div>
+
+      <!-- 第二列 -->
+      <div class="ft-col">
+        <h3>Support</h3>
+        <ul>
+          <li>Individual Support</li>
+          <li>Gaming Support</li>
+          <li>Business & Education Support</li>
+          <li>Contact us</li>
+          <li>Spare Parts</li>
+        </ul>
+      </div>
+
+      <!-- 第三列 -->
+      <div class="ft-col">
+        <h3>About Logitech</h3>
+        <ul>
+          <li>Company Profile</li>
+          <li>Our Team</li>
+          <li>News & Center</li>
+          <li>Careers</li>
+        </ul>
+      </div>
+
+      <!-- 第四列 -->
+      <div class="ft-col">
+        <h3>Community</h3>
+        <ul>
+          <li>Discord</li>
+          <li>Weibo</li>
+          <li>Bilibili</li>
+          <li>Douyin</li>
+        </ul>
+      </div>
+
+      <!-- 第五列 -->
+      <div class="ft-col">
+        <h3>Account</h3>
+        <ul>
+          <li>Manage Account</li>
+          <li>Order Status</li>
+          <li>Wishlist</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="ft-bot">
+      <span>Copyright © 2026 A521. All rights reserved.</span>
+      <div style="display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center">
+        <span>Privacy Policy</span>
+        <span>Terms of Use</span>
+        <span>Cookie Settings</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- ===== JavaScript ===== -->
+<script>
+var currentPage = 'home';
+
+function goPage(page) {
+  currentPage = page;
+  // Update nav active state
+  document.querySelectorAll('#navLinks button').forEach(function(b) {
+    b.classList.toggle('active', b.getAttribute('data-page') === page);
+  });
+  // Show/hide pages
+  document.querySelectorAll('.page').forEach(function(p) {
+    p.classList.toggle('active', p.id === 'page-' + page);
+  });
+  // Scroll to top
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  // Animate elements in view
+  setTimeout(observeAnim, 100);
+}
+
+function toggleMobile() {
+  var nav = document.getElementById('navLinks');
+  nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+  if (nav.style.display === 'flex') {
+    nav.style.flexDirection = 'column';
+    nav.style.position = 'absolute';
+    nav.style.top = '100%';
+    nav.style.left = '0';
+    nav.style.right = '0';
+    nav.style.background = 'var(--bg)';
+    nav.style.padding = '1rem';
+    nav.style.borderBottom = '1px solid var(--border)';
+    nav.style.gap = '0.75rem';
+  }
+}
+
+// Scroll animations
+var animObserver = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (e.isIntersecting) { e.target.classList.add('done'); animObserver.unobserve(e.target); }
+  });
+}, { threshold: 0.1 });
+
+function observeAnim() {
+  document.querySelectorAll('.scroll-anim:not(.done)').forEach(function(el) { animObserver.observe(el); });
+}
+
+// Mark scroll-anim elements
+document.querySelectorAll('.card, .svc-item, .spec-card, [data-scroll]').forEach(function(el) {
+  if (!el.classList.contains('scroll-anim')) el.classList.add('scroll-anim');
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(observeAnim, 200);
+  // Hide mobile menu on click outside
+  var navLinks = document.getElementById('navLinks');
+  document.addEventListener('click', function(e) {
+    if (window.innerWidth < 768 && navLinks.style.display === 'flex' && !e.target.closest('.nav-inner')) {
+      navLinks.style.display = 'none';
+    }
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/gif" href="images/z.gif">
+<meta  name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logi Mice| PRO X SUPERLIGHT 2</title>
+<style>
+:root{--bg:oklch(89.022% 0.15907 109.255 / 0.783);--fg:oklch(15.907% 0.00002 271.152);--bg1:oklch(52.801% 0.14639 148.541 / 0.484);
+--card:oklch(0% 0 0 / 0.55);--card-fg:oklch(18.911% 0.00325 17.082);--primary:oklch(18.561% 0.00161 197.742);
+--primary-fg:oklch(16.962% 0.00166 16.682);--secondary:oklch(100% 0.00011 271.152 / 0.721);--muted-fg:oklch(16.962% 0.00166 16.682);--border:oklch(0.2 0 0)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}body{font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--fg);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button{cursor:pointer;border:none;background:none;font:inherit;color:inherit}
+img{max-width:100%;height:auto;display:block}
+.max-w{max-width:80rem;margin:0 auto;padding:0 1rem}@media(min-width:640px){.max-w{padding:0 1.5rem}}@media(min-width:1024px){.max-w{padding:0 2rem}}
+.nav-fixed{position:fixed;top:0;left:0;right:0;z-index:50;transition:all 0.3s;background:color-mix(in oklch,var(--bg1) 80%,transparent);backdrop-filter:blur(12px)}
+.nav-inner{height:3.5rem;display:flex;align-items:center;justify-content:space-between}
+.nav-links{display:flex;align-items:stretch;gap:0;padding:0rem;border-radius:0rem;background:rgba(23, 240, 66, 0);}
+.nav-links button{font-size:1.3rem;color:#000000;position:relative;white-space: nowrap;font-weight:900;padding:0 1rem;border-radius:0;border:none;background:transparent;}
+.nav-links button:hover{color:var(--fg)}
+.nav-links button.active{color:#ffffff;background:rgba(0,0,0,0.7);border-radius:0rem;padding:0.9rem;}
+.nav-logo{font-size:1.6rem;font-weight:800;color:oklch(99.712% 0.00679 124.973)}
+.hamburger{display:none;color:var(--muted-fg)}@media(max-width:767px){.nav-links{display:none}.hamburger{display:flex}}
+.page{display:none;padding-top:3.5rem}.page.active{display:block}
+.hero-min{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem 1rem;text-align:center;position:relative;overflow:hidden}
+.hero-min h1{font-size:2.5rem;font-weight:700;letter-spacing:-0.025em;line-height:1.1}@media(min-width:640px){.hero-min h1{font-size:3.5rem}}
+.hero-min .sub{font-size:1.25rem;font-weight:500;margin-top:0.75rem;color:color-mix(in oklch,var(--fg) 90%,transparent)}
+.hero-min .desc{font-size:1rem;color:var(--muted-fg);margin-top:0.75rem;max-width:36rem}
+.hero-min img{max-width:500px;width:100%;margin-top:2rem}
+.btn-pri{display:inline-flex;align-items:center;border-radius:9999px;background:var(--primary);color:var(--primary-fg);font-size:0.875rem;font-weight:500;padding:0.625rem 1.5rem;transition:opacity 0.2s}
+.btn-pri:hover{opacity:0.9}
+.section{padding:5rem 0;position:relative}.section h2{font-size:2rem;font-weight:700;margin-bottom:1rem}
+.section h3{font-size:1.25rem;font-weight:600;margin-bottom:0.75rem}
+.grid-2{display:grid;gap:2rem}@media(min-width:768px){.grid-2{grid-template-columns:1fr 1fr}}
+.grid-3{display:grid;gap:1.5rem}@media(min-width:768px){.grid-3{grid-template-columns:repeat(3,1fr)}}
+.grid-4{display:grid;gap:1.5rem}@media(min-width:868px){.grid-4{grid-template-columns:repeat(2,1fr)}}@media(min-width:1024px){.grid-4{grid-template-columns:repeat(4,1fr)}}
+.card3{
+    background-color: #e8f34db0;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 2rem 0;
+}
+
+.card2{
+    background-color: #e8f34db0;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 2rem 0 0 0;
+    margin-bottom: 0rem;
+    }
+.card{
+  border-radius:1rem;
+  /* 半透明底色+毛玻璃 */
+  background: oklch(from var(--card) l c h / 0.001);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(3px);
+  padding:1.5rem;
+  overflow:hidden;
+  border:0px solid oklch(from var(--border) l c h / 0.65);
+}
+
+.pg-3{background:color-mix(in oklch,var(--secondary) 30%,transparent)}
+.text-m1{color:#eaf0f6;}
+.text-muted{color:#f3f4f5;}
+.text-sm{font-size: 1.25rem;margin-top:0.5rem;color:#1D2329;font-weight:600;
+          font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;  
+          word-wrap: break-word;
+          white-space: normal;
+          letter-spacing: 0.01em;
+          line-height: 1.9;
+          text-indent: 12px;
+          letter-spacing: 0.01em;
+          word-spacing: 0.05em;
+            text-align:left;    /* 改用左对齐，不再强行拉空格填满行【首选】 */
+            overflow-wrap: break-word; /* 超长单词必要时单词内断开换行 */
+            hyphens: auto;      /* 自动英文连字符断词，大幅减少空行留白，加lang="en"生效 */
+            word-break:normal;
+          }
+.text-xm{font-size: 1.85rem;margin-top:0.5rem;color:#212b2d;font-weight:500;
+          font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;  
+          word-wrap: break-word;
+          white-space: normal;
+          letter-spacing: 0.01em;
+          line-height: 1.6;
+          letter-spacing: 0.01em;
+          word-spacing: 0.05em;
+          padding: 1.5rem 0;
+          margin: 0 0 2rem 0;
+          white-space: nowrap; margin: 0;
+            text-align:left;    /* 改用左对齐，不再强行拉空格填满行【首选】 */
+            overflow-wrap: break-word; /* 超长单词必要时单词内断开换行 */
+            hyphens: auto;      /* 自动英文连字符断词，大幅减少空行留白，加lang="en"生效 */
+          }
+.text-m{font-size: 1.25rem;margin-top:0.5rem;font-weight:500;
+          font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;  
+          white-space: nowrap; margin: 0;
+          }
+.fw-5{font-weight:500}
+.mt-6{margin-top:1.5rem}.mt-12{margin-top:3rem}
+.mb-4{margin-bottom:1rem}.mb-8{margin-bottom:2rem}
+.text-center{text-align:center}
+.flex{display:flex}.flex-col{flex-direction:column}.items-c{align-items:center}.jc-sb{justify-content:space-between}.jc-c{justify-content:center}
+.w-full{width:100%}.block{display:block}
+.relative{position:relative}.absolute{position:absolute}.inset-0{top:0;right:0;bottom:0;left:0}
+.border-b{border-bottom:1px solid var(--border)}
+.leading-7{line-height:1.75}
+/* Statistics */
+.stat-num{font-size:2.5rem;font-weight:700;color:var(--primary-fg);line-height:1}
+          @media(min-width:640px){.stat-num{font-size:3rem}}
+/* Footer */
+.ft{background:var(--secondary);border-top:1px solid var(--border)}
+.ft-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem;padding:3rem 0}@media(min-width:768px){.ft-grid{grid-template-columns:repeat(4,1fr)}}
+.ft-col h3{font-size:0.8125rem;font-weight:600;margin-bottom:1rem}
+.ft-col a{font-size:0.8125rem;color:var(--muted-fg);transition:color 0.2s}
+.ft-col a:hover{color:var(--fg)}
+.ft-bot{border-top:1px solid var(--border);padding:1.5rem 0;display:flex;flex-direction:column;gap:1rem;text-align:center;font-size:0.75rem;color:var(--muted-fg)}@media(min-width:768px){.ft-bot{flex-direction:row;justify-content:space-between}}
+/* Team */
+/* Team cards */
+.team-card{
+  border-radius:1rem;
+  background:var(--card);
+  padding:2rem 1.5rem;
+  border:1px solid color-mix(in oklch,var(--border) 40%,transparent);
+  transition:all 0.35s cubic-bezier(.4,0,.2,1);
+  position:relative;
+  overflow:hidden
+}
+.team-card::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  border-radius:1rem;
+  background:linear-gradient(135deg,color-mix(in oklch,var(--primary) 6%,transparent),transparent 60%);
+  opacity:0;
+  transition:opacity 0.35s ease
+}
+.team-card:hover{
+  transform:translateY(-4px);
+  border-color:color-mix(in oklch,var(--primary) 30%,transparent);
+  box-shadow:0 8px 32px rgba(0,0,0,0.25)
+}
+.team-card:hover::before{opacity:1}
+.team-card>*{position:relative;z-index:1}
+.team-img{width:5rem;height:5rem;border-radius:9999px;background:var(--primary);margin-bottom:0.75rem;display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-weight:700;color:var(--primary-fg);transition:all 0.35s cubic-bezier(.4,0,.2,1)}
+.team-card:hover .team-img{
+  transform:scale(1.1);
+  box-shadow:0 4px 20px color-mix(in oklch,var(--primary) 35%,transparent)
+}
+/* After-sale */
+/* After-sale service grid - Retro 90s style */
+.svc-grid{
+  display:table;
+  width:100%;
+  border-collapse:collapse;
+  margin-top:2rem;
+  border:3px solid #333;
+  background:#fff;
+  box-shadow:4px 4px 0 #333;
+}
+.svc-item{
+  display:table-row;
+  border-bottom:1px dashed #ccc;
+}
+.svc-item:last-child{
+  border-bottom:none;
+}
+.svc-item .svc-icon{
+  display:table-cell;
+  width:6rem;
+  padding:2.5rem 1rem;
+  text-align:center;
+  font-size:3.5rem;
+  background:#f0f0f0;
+  border-right:2px solid #999;
+  vertical-align:middle;
+}
+.svc-item .svc-content{
+  display:table-cell;
+  padding:2.5rem 2rem;
+  vertical-align:middle;
+}
+.svc-item h3{
+  font-size:1.4rem;
+  font-weight:bold;
+  color:#1a365d;
+  text-transform:uppercase;
+  letter-spacing:0.05em;
+  margin:0 0 0.75rem 0;
+  font-family:Arial, Helvetica, sans-serif;
+}
+.svc-item p{
+  font-size:1.15rem;
+  color:#444;
+  line-height:1.6;
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+}
+/* Key Features cards - Retro style */
+.feature-card{
+  background:#fff;
+  border:3px solid #333;
+  padding:2rem 1.5rem;
+  text-align:center;
+  box-shadow:4px 4px 0 #333;
+  border-radius:0;
+}
+/* Additional Features boxes - Retro style with 20% opacity */
+.feature-box{
+  background:rgba(255,255,255,0.6);
+  border:3px solid #333;
+  padding:1.5rem;
+  box-shadow:4px 4px 0 #333;
+  border-radius:0;
+  width:100%;
+  box-sizing:border-box;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+}
+/* Remove spacing between feature sections */
+.feature-section{
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.feature-card .stat-num{
+  font-size:3.5rem;
+  font-weight:bold;
+  color:#1a365d;
+  font-family:Arial, Helvetica, sans-serif;
+  margin-bottom:0rem;
+}
+.feature-card .stat-label{
+  font-size:1rem;
+  font-weight:bold;
+  color:#1a365d;
+  text-transform:uppercase;
+  letter-spacing:0.05em;
+  font-family:Arial, Helvetica, sans-serif;
+  margin-bottom:0.5rem;
+}
+.feature-card .stat-desc{
+  font-size:0.875rem;
+  color:#444;
+  font-family:Arial, Helvetica, sans-serif;
+  line-height:1.4;
+}
+/* Company Profile page — full-bleed background image with top/bottom edge fade */
+#page-profile{position:relative;min-height:100vh}
+#page-profile::before{content:'';position:absolute;inset:0;
+              background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/tt.webp');background-size:cover;
+              background-position:center;background-repeat:no-repeat;
+              -webkit-mask-image:linear-gradient(to bottom,transparent 0%,rgba(0,0,0,.15) 7%,#000 22%,#000 78%,rgba(0,0,0,.15) 93%,transparent 100%);
+              mask-image:linear-gradient(to bottom,transparent 0%,rgba(0,0,0,.15) 7%,#000 22%,#000 78%,rgba(0,0,0,.15) 93%,transparent 100%);
+              z-index:0;pointer-events:none;}
+#page-profile>*{position:relative;z-index:1}
+#page-profile .section:first-child{padding-top:6rem}
+/* scroll animation */
+.scroll-anim{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease-out,transform 0.6s ease-out}
+.scroll-anim.done{opacity:1;transform:translateY(0)}
+.grad-text{
+  background:linear-gradient(600deg,#000000,#000000);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;}
+.grad1-text{
+background: #000;
+  background-clip:text;
+
+}
+</style>
+</head>
+<body>
+
+<!-- ===== Navigation ===== -->
+<nav class="nav-fixed">
+  <div class="nav-inner" style="display:flex;align-items:center;justify-content:space-between;padding:0 0 0 10rem;">
+      <!-- 左侧LOGO -->
+      <span class="nav-logo">Logi Mice</span>
+      <img src="images/z.gif" alt="Animated Logo" style="width: 52px; height: 52px; margin-left: 0.5rem; vertical-align: middle;">
+      <!-- 中间导航链接 -->
+      <div class="nav-links" id="navLinks" style="display:flex;gap:1.2rem;">
+        <button class="active" data-page="home" onclick="goPage('home')">Homepage</button>
+        <button data-page="products" onclick="goPage('products')">Products</button>
+        <button data-page="profile" onclick="goPage('profile')">Company Profile</button>
+        <button data-page="service" onclick="goPage('service')">After-sale Service</button>
+        <button data-page="team" onclick="goPage('team')">Our Team</button>
+      </div>
+      <!-- 右侧汉堡菜单 -->
+      <button class="hamburger" id="hamBtn" onclick="toggleMobile()" style="border:none;background:transparent;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      </button>
+</div>
+</nav>
+
+<!-- ===== PAGE: Home ===== -->
+<div class="page active" id="page-home">
+  <section class="hero-min" style="padding-bottom:0;">
+    <p class="text-xs" style="letter-spacing:0.1em;text-transform:uppercase;color:var(--primary);font-weight:500;margin-bottom:0.75rem;font-size: 1rem;">Pro Series</p>
+    <h1 class="grad-text" style="font-size: 5rem;">PRO X SUPERLIGHT 2c</h1>
+    <p class="sub" style="font-size: 2rem;">DESIGNED WITH PROS. ENGINEERED TO WIN.</p>
+    <p class="desc"style="font-size: 1.25rem;">Meet the newest challenger in our “champion-winning” line up. Crafted with the world’s top esports athletes.</p>
+
+<!-- ========== 整模块居中：上6图(2*3+底层黑遮罩全屏) + 下方文字区块 ========== -->
+<div style="margin: 5rem 0 0rem;">
+
+  <!-- 顶部：全屏黑色底层遮罩 + 居中6图（无圆角） -->
+  <div style="
+    background-color: #00000045;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding: 2rem 0;
+  ">
+    <!-- 6张图片 2×3 居中容器 -->
+    <div style="
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    ">
+      <img src="images/c1.webp" alt="" style="width:100%;height:auto;display:block;">
+      <img src="images/c5.webp" alt="" style="width:100%;height:auto;display:block;">
+      <img src="images/c7.webp" alt="" style="width:100%;height:auto;display:block;">
+      <img src="images/b1.webp" alt="" style="width:100%;height:auto;display:block;">
+      <img src="images/b2.webp" alt="" style="width:100%;height:auto;display:block;">
+      <img src="images/c2.webp" alt="" style="width:100%;height:auto;display:block;">
+    </div>
+  </div>
+  
+  <!-- 下方：Description + 2×2规格面板 -->
+  <div style="
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-bottom:0;
+  ">
+    <div class="feature-box" style="margin-bottom:0;">
+      <div class="max-w">
+      <!-- Description 居中 -->
+      <div style="margin-bottom:3rem;">
+        <h3 class="text-sm" style="font-size:4.3rem; margin-bottom:1rem; font-family:Arial, Helvetica, sans-serif; color:#1a365d;">Description</h3>
+        <p class="text-sm" style="font-size:2.25rem; font-weight:500; line-height:1.3; letter-spacing:-0.01em; max-width:1000px; margin: 5px 0; font-family:Arial, Helvetica, sans-serif; color:#444;">
+          PRO X SUPERLIGHT 2c is a 1.79 oz(51g) compact mouse featuring advanced HERO 2 sensor, robust LIGHTSPEED wireless, and LIGHTFORCE switches while delivering up to 95 hours of battery life.
+        </p>
+      </div>
+
+      <!-- 规格参数：2×2 网格（4块统一样式） -->
+      <div class="text-xm"
+        style="
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        text-align:left;
+      ">
+        <!-- 1. Dimensions -->
+        <div style="border:2px solid #333; padding:1.5rem; background:rgba(255,255,255,0.6);">
+          <h4 style="font-size:2rem; margin:0 0 1rem 0; font-family:Arial, Helvetica, sans-serif; color:#1a365d; text-transform:uppercase;">Dimensions</h4>
+          <p style="margin:0.25rem 0; font-size:1.25rem; line-height:1.6; font-family:Arial, Helvetica, sans-serif; color:#444;">
+            Height: 1.51 in (38.5mm)<br>
+            Width: 2.41 in (61.4mm)<br>
+            Length: 4.66 in (118.4mm)<br>
+            Weight: 1.8 oz (51g)
+          </p>
+        </div>
+
+        <!-- 2. General Specifications -->
+        <div style="border:2px solid #333; padding:1.5rem; background:rgba(255,255,255,0.6);">
+          <h4 style="font-size:2rem; margin:0 0 1rem 0; font-family:Arial, Helvetica, sans-serif; color:#1a365d; text-transform:uppercase;">General Specifications</h4>
+          <p style="margin:0.25rem 0; font-size:1.25rem; line-height:1.6; font-family:Arial, Helvetica, sans-serif; color:#444;">
+            Number of Buttons: 5 buttons<br>
+            Onboard memory: Yes<br>
+            <span style="font-size:1rem; opacity:0.7;">*Advanced features require Logitech G HUB Software</span>
+          </p>
+        </div>
+
+        <!-- 3. Tracking -->
+        <div style="border:2px solid #333; padding:1.5rem; background:rgba(255,255,255,0.6);">
+          <h4 style="font-size:2rem; margin:0 0 1rem 0; font-family:Arial, Helvetica, sans-serif; color:#1a365d; text-transform:uppercase;">Tracking</h4>
+          <p style="margin:0.25rem 0; font-size:1.25rem; line-height:1.6; font-family:Arial, Helvetica, sans-serif; color:#444;">
+            Sensor: HERO 2<br>
+            Resolution: 100 – 44,000 DPI<br>
+            Max. acceleration: > 88 G*<br>
+            Max. speed: > 888 IPS*
+          </p>
+        </div>
+
+        <!-- 4. Battery -->
+        <div style="border:2px solid #333; padding:1.5rem; background:rgba(255,255,255,0.6);">
+          <h4 style="font-size:2rem; margin:0 0 1rem 0; font-family:Arial, Helvetica, sans-serif; color:#1a365d; text-transform:uppercase;">Battery</h4>
+          <p style="margin:0.25rem 0; font-size:1.25rem; line-height:1.6; font-family:Arial, Helvetica, sans-serif; color:#444;">
+            Constant motion: 95 h<br>
+            <span style="font-size:1rem; opacity:0.7;">*Battery life varies with use conditions</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ============================================== -->
+
+  </section>
+</div>
+<!-- ===== PAGE: Products ===== -->
+<div class="page" id="page-products">
+
+  <!-- Product Hero -->
+  <section class="hero-min" style="min-height:auto;padding:4rem 1rem 2rem">
+    <p class="text-xs" style="letter-spacing:0.1em;text-transform:uppercase;color:var(--primary);font-weight:500;margin-bottom:0.75rem;font-size: 1rem;">Product Series</p>
+    <h1 class="grad-text" style="font-size:5rem">PRO X SUPERLIGHT 2c</h1>
+    <p class="sub" style="font-size:2rem">LIGHTSPEED Wireless Gaming Mouse</p>
+    <img src="images/intro.jpg" alt="PRO X SUPERLIGHT 2" style="max-width:800px;margin-top:2rem;">
+  </section>
+
+  <!-- Highlights -->
+  <section class="section pg-3">
+    <div class="max-w">
+      <h2 class="grad1-text text-center" style="font-size:3rem; margin-bottom:2.5rem;">Key Features</h2>
+      <div class="grid-4" style="margin-top:0;">
+        <div class="feature-card">
+          <div class="stat-num">51g</div>
+          <div class="stat-label">Ultra-Light Weight</div>
+          <div class="stat-desc">0.7mm Ultra-Thin Base</div>
+        </div>
+        <div class="feature-card">
+          <div class="stat-num">44K</div>
+          <div class="stat-label">DPI</div>
+          <div class="stat-desc">HERO 2 Sensor, Zero Smoothing</div>
+        </div>
+        <div class="feature-card">
+          <div class="stat-num">8K Hz</div>
+          <div class="stat-label">Report Rate</div>
+          <div class="stat-desc">0.125ms Response</div>
+        </div>
+        <div class="feature-card">
+          <div class="stat-num">95h</div>
+          <div class="stat-label">Battery Life</div>
+          <div class="stat-desc">15 Min Fast Charge = 13h Usage</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<h2 class="grad1-text text-center" style="font-size:4rem; margin-top:1rem;">Additional Features</h2>
+  
+<!-- Battery1 -->
+<section class="grad1-text feature-section pg-3">
+  <div class="feature-box">
+    <div class="max-w">
+      <div class="grid-2 items-c">
+        <div><img src="images/t1.webp" style="max-width: 600px;border-radius:0rem;"></div>
+        <div>
+          <div style="max-width: 600px;">
+            <h2 class="text-xm" style="white-space: nowrap; margin: 0;">PRECISION PERFECTED</h2>
+          </div>
+          <p class="text-sm text-muted leading-7" style="text-indent: 0px;min-width: 640px;margin-top:0.5rem">Experience pro-precision with an advanced gaming sensor. Our exclusive HERO 2 sensor optimizes performance and efficiency with sub micron tracking at over 888 IPS, 8 G and up to 44,000 DPI.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Batter2y -->
+<section class="grad1-text feature-section pg-3">
+  <div class="feature-box">
+    <div class="max-w">
+      <div class="grid-2 items-c">
+        <div><img src="images/t2.webp" style="max-width: 600px;border-radius:0rem"></div>
+        <div>
+          <div style="max-width: 600px;">
+            <h2 class="text-xm" style="white-space: nowrap; margin: 0;">Play at LIGHTSPEED</h2>
+          </div>
+          <p class="text-sm text-muted leading-7" style="text-indent: 0px;min-width: 640px;margin-top:0.5rem">The trusted performance and reliability of LIGHTSPEED wireless at up to 8 kHz polling is at your fingertips. We design our wireless connection for tournament play and test for total reliability even in extreme RF environments beyond the world's biggest LANs. We make consistency critical – you put all your attention on your game.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Battery3 -->
+<section class="grad1-text feature-section pg-3">
+  <div class="feature-box">
+    <div class="max-w">
+      <div class="grid-2 items-c">
+        <div><img src="images/t3.webp" style="max-width: 600px;border-radius:0rem"></div>
+        <div><h2 class="text-xm" style="white-space: nowrap; margin: 0;">PRO PERFORMANCE IN A CLICK</h2><p class="text-sm text-muted leading-7" style="text-indent: 0px;min-width: 640px;margin-top:0.5rem">LIGHTFORCE switches offer the best of both worlds by combining the speed and reliability of optical switches with the satisfying feel of a traditional microswitch.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Battery4 -->
+<section class="grad1-text feature-section pg-3" style="margin-bottom:0;">
+  <div class="feature-box">
+    <div class="max-w">
+      <div class="grid-2 items-c">
+        <div><img src="images/t4.webp" style="max-width: 600px;border-radius:0rem"></div>
+        <div><h2 class="text-xm" style="white-space: nowrap; margin: 0;">PRO GRADE TECH</h2>
+          <p class="text-sm text-muted leading-7" style="text-indent: 0px;min-width: 640px;margin-top:0.5rem">With the power efficiency of HERO 2, LIGHTSPEED, and LIGHTFORCE, get up to 95 hours of battery life on a single charge. Quickly recharge using USB-C, or POWERPLAY 2 for complete wireless freedom (POWERPLAY 2 sold separately).</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+</div>
+<!-- ===== PAGE: Company Profile ===== -->
+<div class="page" id="page-profile">
+  <section class="section" style="padding-top:6rem">
+    <div class="max-w">
+
+      <div class="text-center" style="max-width:48rem;margin:0 auto">
+        <h1 class="grad-text" style="font-size:6rem;font-weight:900 !important">About Logitech</h1>
+      </div>
+
+      <div  style="margin-top:5rem;max-width:70rem">
+        <h2 class="text-sm" style="color:rgb(255, 255, 255);font-size:4rem;font-weight: 900;left:-12px;">About Us</h2>
+        <p class="text-sm text-muted leading-7" style="font-size: 2.0rem;margin-top:0.5rem;color:rgb(255, 255, 255);font-weight:500;">At Logitech, our purpose is to extend human potential in work and play.
+We do this by designing software-enabled hardware solutions that drive superior performance when gaming and superior productivity while at work, all with maximum comfort, speed and accuracy. We enable creativity when pursuing passions and connectivity so everyone is seen, heard and can contribute in their own unique way.</p>
+      </div>
+
+        <div class="grid-3" style="margin-top:4rem">
+          <div class=" text-center">
+            <div class="text-m text-muted" style="font-size:3.5rem;font-weight:700;">1981</div>
+            <p class="text-xs fw-5 text-m1" style="font-size:1.5rem;margin-top:0.5rem">Year Founded</p>
+            <p class="text-xs text-m1" style="margin-top:0.55rem">Founded in Apples, Switzerland</p>
+          </div>
+          <div class=" text-center">
+            <div class="text-m text-muted" style="font-size:3.5rem;font-weight:700;">100+</div>
+            <p class="text-xs fw-5 text-m1" style="font-size:1.5rem;margin-top:0.5rem">Countries & Regions</p>
+            <p class="text-xs text-m1" style="margin-top:0.55rem">Global Business Coverage</p>
+          </div>
+          <div class=" text-center">
+            <div class="text-m text-muted" style="font-size:3.5rem;font-weight:700;">7,000+</div>
+            <p class="text-xs fw-5 text-m1" style="font-size:1.5rem;margin-top:0.5rem">Global Employees</p>
+            <p class="text-xs text-m1" style="margin-top:0.55rem">40+ Years of Industry Experience</p>
+          </div>
+        </div>
+
+
+<div style="margin-top:4rem">
+  <div style="
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+  ">
+    <!-- 第1张图 + 文字 -->
+    <div>
+      <img src="images/brand1.webp" alt="Equality & Environment" style="width:100%; height:auto; display:block; margin-bottom:0.8rem;">
+      <p style="color:#fff; font-size:1.1rem; font-weight:500;">Equality & Environment</p>
+    </div>
+
+    <!-- 第2张图 + 文字 -->
+    <div>
+      <img src="images/brand2.webp" alt="Open & Ourselves" style="width:100%; height:auto; display:block; margin-bottom:0.8rem;">
+      <p style="color:#fff; font-size:1.1rem; font-weight:500;">Open & Ourselves</p>
+    </div>
+
+    <!-- 第3张图 + 文字 -->
+    <div>
+      <img src="images/brand3.webp" alt="可持续发展" style="width:100%; height:auto; display:block; margin-bottom:0.8rem;">
+      <p style="color:#fff; font-size:1.1rem; font-weight:500;">Hungry & Humble</p>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </section>
+</div>
+
+<!-- ===== PAGE: After-sale Service ===== -->
+<div class="page" id="page-service">
+  <section class="section" style="padding-top:6rem">
+    <div class="max-w">
+
+      <div class="text-center" style="max-width:48rem;margin:0 auto">
+        <h1 class="grad-text" style="font-size:3.5rem;font-weight:900">After-sale Service</h1>
+        <p class="text-m" style="margin-top:0.5rem">We provide you with comprehensive after-sales support</p>
+      </div>
+
+      <div class="svc-grid">
+        <div class="svc-item">
+          <div class="svc-icon">🛡</div>
+          <div class="svc-content">
+            <h3>2-YEAR WARRANTY</h3>
+            <p>All Logitech G products come with a 2-year limited hardware warranty. If your mouse has any factory quality issues under normal use, we will give you free repair or a brand-new replacement without extra fees.</p>
+          </div>
+        </div>
+        <div class="svc-item">
+          <div class="svc-icon">📦</div>
+          <div class="svc-content">
+            <h3>30-DAY RETURN</h3>
+            <p>Within 30 days after you buy the product, you can send it back and get your full money back at any time. We will not ask you complicated questions for a qualified return.</p>
+          </div>
+        </div>
+        <div class="svc-item">
+          <div class="svc-icon">🚚</div>
+          <div class="svc-content">
+            <h3>FREE SHIPPING</h3>
+            <p>We offer free shipping for all orders over $29 on our official online store. After you finish your payment, your goods will be safely delivered to you in 3–5 normal business days.</p>
+          </div>
+        </div>
+        <div class="svc-item">
+          <div class="svc-icon">💬</div>
+          <div class="svc-content">
+            <h3>ONLINE SUPPORT</h3>
+            <p>We provide 24/7 all-day online customer support for every buyer. You can easily contact our service team via official website, email, or social media whenever you meet problems.</p>
+          </div>
+        </div>
+        <div class="svc-item">
+          <div class="svc-icon">🔧</div>
+          <div class="svc-content">
+            <h3>REPAIR SERVICE</h3>
+            <p>We have lots of authorized repair centers all over the country. You can fill in a service ticket online first, then get a fast-response professional repair service nearby.</p>
+          </div>
+        </div>
+        <div class="svc-item">
+          <div class="svc-icon">📥</div>
+          <div class="svc-content">
+            <h3>DRIVER DOWNLOAD</h3>
+            <p>You can download the official Logitech G HUB software totally free. It lets you freely set custom mouse buttons, RGB lighting colors, and game performance values to fit your playing habits.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:3rem;text-align:center;padding:2.5rem 2rem;border:1px solid color-mix(in oklch,var(--primary) 15%,transparent);position:relative">
+        <div style="position:absolute;top:0;left:2rem;right:2rem;height:3px;background:linear-gradient(90deg,transparent,var(--primary),transparent);border-radius:0 0 3px 3px"></div>
+        <h3 style="font-size:1.15rem">Contact Us</h3>
+        <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:1.25rem 1.5rem;margin-top:0.75rem">
+          <span style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.9rem;color:var(--muted-fg)">📧 support@logitech.com</span>
+          <span style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.9rem;color:var(--muted-fg)">📞 400-XXX-XXXX</span>
+          <span style="display:inline-flex;align-items:center;gap:0.4rem;font-size:0.9rem;color:var(--muted-fg)">🌐 support.logitech.com</span>
+        </div>
+        <p class="text-xs text-muted" style="margin-top:0.75rem">Business hours: Monday to Friday 9:00 - 18:00 (excluding holidays)</p>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<!-- ===== PAGE: Our Team ===== -->
+<div class="page" id="page-team">
+  <section class="section" style="padding-top:6rem">
+    <div class="max-w">
+
+      <div class="text-center" style="max-width:48rem;margin:0 auto">
+        <h1 class="grad-text" style="font-size:3rem;font-weight:700">Company Leadership</h1>
+      </div>
+
+<div style="margin-top:3rem; display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center;">
+  <!-- 第 1 个 -->
+  <div class="team-card text-center" style="flex: 0 1 calc(33.333% - 1rem);min-width:200px">
+    <h3 class="text-m text-muted" style="font-size:2rem">Guo Yuqi</h3>
+    <p class="text-m text-muted" style="margin-top:0.25rem"></p>
+  </div>
+
+  <!-- 第 2 个 -->
+  <div class="team-card text-center" style="flex: 0 1 calc(33.333% - 1rem);min-width:200px">
+
+    <h3 class="text-m text-muted" style="font-size:2rem">He Jiake</h3>
+    <p class="text-m text-muted" style="margin-top:0.25rem"></p>
+  </div>
+
+  <!-- 第 3 个 -->
+  <div class="team-card text-center" style="flex: 0 1 calc(33.333% - 1rem);min-width:200px">
+
+    <h3 class="text-m text-muted" style="font-size:2rem">Zhan Decheng</h3>
+    <p class="text-m text-muted" style="margin-top:0.25rem"></p>
+  </div>
+
+  <!-- 第 4 个 -->
+  <div class="team-card text-center" style="flex: 0 1 calc(33.333% - 1rem);min-width:200px">
+
+    <h3 class="text-m text-muted" style="font-size:2rem">Meng Linghui</h3>
+    <p class="text-m text-muted" style="margin-top:0.25rem"></p>
+  </div>
+
+  <!-- 第 5 个 -->
+  <div class="team-card text-center" style="flex: 0 1 calc(33.333% - 1rem);min-width:200px">
+
+    <h3 class="text-m text-muted" style="font-size:2rem">Xu Jun</h3>
+    <p class="text-m text-muted" style="margin-top:0.25rem"></p>
+  </div>
+</div>
+
+      <div class="card" style="margin-top:3rem;padding:2rem;text-align:center">
+        <h2 class="grad1-text" style="margin-bottom:0.5rem">How you join</h2>
+        <p class="text-sm text-muted">At Logitech, we don't just work—we live our values every day, fostering innovation, collaboration, and authenticity in everything we do. When you join our team, we're not just looking for skills—we're looking for people who embody our spirit: curious minds, creative problem-solvers, and genuine individuals who bring their whole selves to work. Be unapologetically you, come ready to share your unique perspective, and rest assured we’ll make your journey with us as engaging, respectful, and rewarding as possible.</p>
+        <div style="margin-top: 3rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; text-align: left;">
+  <!-- 第一列 -->
+  <div>
+    <h3 style="font-size: 1.1rem; color: #090909; margin: 0 0 0.5rem 0;">Introduce Yourself</h3>
+    <p style="font-size: 0.9rem; color: #090909; line-height: 1.6; margin: 0;">Apply for any open listing. 
+</p>
+  </div>
+
+  <!-- 第二列 -->
+  <div>
+    <h3 style="font-size: 1.1rem; color: #090909; margin: 0 0 0.5rem 0;">Getting to know us</h3>
+    <p style="font-size: 0.9rem; color: #090909; line-height: 1.6; margin: 0;">Meet future colleagues; hiring manager, team members, other leaders, etc. 
+</p>
+  </div>
+
+  <!-- 第三列 -->
+  <div>
+    <h3 style="font-size: 1.1rem; color: #090909; margin: 0 0 0.5rem 0;">Joining Logitech</h3>
+    <p style="font-size: 0.9rem; color: #090909; line-height: 1.6; margin: 0;">We discuss and extend an offer. You accept. Can’t wait to have you here!
+  </p>
+    </div>
+
+
+</div>  
+
+
+  </section>
+
+      </div>
+
+    </div>
+  </section>
+</div>
+<!-- ===== Footer 黑底 + 白绿渐变 + 全部纯文字 无点击 ===== -->
+<style>
+.ft {
+  background: #000;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.6;
+  padding: 24px 0;
+  margin-top: 0px;
+}
+.max-w {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 22px;
+}
+.ft-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #333;
+}
+.ft-col h3 {
+  font-size: 16px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #ffffff, #4ade80);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: 0 0 10px 0;
+}
+.ft-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.ft-col li {
+  margin-bottom: 8px;
+  color: #aaa;
+}
+.ft-bot {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding-top: 18px;
+  font-size: 14px;
+  color: #666;
+}
+</style>
+
+<footer style="font-family: 'Brush Script MT', cursive;" class="ft">
+  <div class="max-w">
+    <div class="ft-grid">
+
+      <!-- 第一列 -->
+      <div class="ft-col ">
+        <h3>Shop and Learn</h3>
+        <ul>
+          <li>Store</li>
+          <li>Logitech Mice</li>
+          <li>Keyboards</li>
+          <li>Headsets</li>
+          <li>Accessories</li>
+        </ul>
+      </div>
+
+      <!-- 第二列 -->
+      <div class="ft-col">
+        <h3>Support</h3>
+        <ul>
+          <li>Individual Support</li>
+          <li>Gaming Support</li>
+          <li>Business & Education Support</li>
+          <li>Contact us</li>
+          <li>Spare Parts</li>
+        </ul>
+      </div>
+
+      <!-- 第三列 -->
+      <div class="ft-col">
+        <h3>About Logitech</h3>
+        <ul>
+          <li>Company Profile</li>
+          <li>Our Team</li>
+          <li>News & Center</li>
+          <li>Careers</li>
+        </ul>
+      </div>
+
+      <!-- 第四列 -->
+      <div class="ft-col">
+        <h3>Community</h3>
+        <ul>
+          <li>Discord</li>
+          <li>Weibo</li>
+          <li>Bilibili</li>
+          <li>Douyin</li>
+        </ul>
+      </div>
+
+      <!-- 第五列 -->
+      <div class="ft-col">
+        <h3>Account</h3>
+        <ul>
+          <li>Manage Account</li>
+          <li>Order Status</li>
+          <li>Wishlist</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="ft-bot">
+      <span>Copyright © 2026 A521. All rights reserved.</span>
+      <div style="display:flex;gap:1.5rem;flex-wrap:wrap;justify-content:center">
+        <span>Privacy Policy</span>
+        <span>Terms of Use</span>
+        <span>Cookie Settings</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- ===== JavaScript ===== -->
+<script>
+var currentPage = 'home';
+
+function goPage(page) {
+  currentPage = page;
+  // Update nav active state
+  document.querySelectorAll('#navLinks button').forEach(function(b) {
+    b.classList.toggle('active', b.getAttribute('data-page') === page);
+  });
+  // Show/hide pages
+  document.querySelectorAll('.page').forEach(function(p) {
+    p.classList.toggle('active', p.id === 'page-' + page);
+  });
+  // Scroll to top
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  // Animate elements in view
+  setTimeout(observeAnim, 100);
+}
+
+function toggleMobile() {
+  var nav = document.getElementById('navLinks');
+  nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+  if (nav.style.display === 'flex') {
+    nav.style.flexDirection = 'column';
+    nav.style.position = 'absolute';
+    nav.style.top = '100%';
+    nav.style.left = '0';
+    nav.style.right = '0';
+    nav.style.background = 'var(--bg)';
+    nav.style.padding = '1rem';
+    nav.style.borderBottom = '1px solid var(--border)';
+    nav.style.gap = '0.75rem';
+  }
+}
+
+// Scroll animations
+var animObserver = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (e.isIntersecting) { e.target.classList.add('done'); animObserver.unobserve(e.target); }
+  });
+}, { threshold: 0.1 });
+
+function observeAnim() {
+  document.querySelectorAll('.scroll-anim:not(.done)').forEach(function(el) { animObserver.observe(el); });
+}
+
+// Mark scroll-anim elements
+document.querySelectorAll('.card, .svc-item, .spec-card, [data-scroll]').forEach(function(el) {
+  if (!el.classList.contains('scroll-anim')) el.classList.add('scroll-anim');
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(observeAnim, 200);
+  // Hide mobile menu on click outside
+  var navLinks = document.getElementById('navLinks');
+  document.addEventListener('click', function(e) {
+    if (window.innerWidth < 768 && navLinks.style.display === 'flex' && !e.target.closest('.nav-inner')) {
+      navLinks.style.display = 'none';
+    }
+  });
+});
+</script>
+</body>
+</html>
